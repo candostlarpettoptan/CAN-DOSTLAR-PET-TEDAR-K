@@ -1,27 +1,26 @@
-# Can Dostlar Pet Tedarik — V2
+# Can Dostlar Pet Tedarik — Supabase Bağlantılı V3
 
-Profesyonel B2B pet tedarikçi web sitesi arayüzü.
+GitHub Pages üzerinde çalışan statik siteye Supabase Authentication bağlantısı eklenmiştir.
 
-## İçerik
-- `index.html` — ana sayfa
-- `style.css` — responsive tasarım
-- `script.js` — kategori, arama, sıralama ve bayi modalı
+## 1) Supabase SQL kurulumu
+Supabase Dashboard → SQL Editor → New query bölümünü açın.
+`supabase-setup.sql` içeriğini yapıştırıp Run'a basın.
 
-## Önemli
-Bu sürüm **profesyonel frontend/prototip** sürümüdür. Bayi kayıt, admin onayı, gerçek kullanıcı girişi, veritabanı, stok ve gerçek fiyat yönetimi henüz bağlı değildir.
+Bu işlem `dealer_profiles` tablosunu ve yeni bayi kayıtlarında otomatik profil oluşturacak trigger'ı kurar.
 
-Gerçek sistem için sonraki aşamada:
-1. Supabase Auth
-2. Bayi başvuru tablosu
-3. Admin onay ekranı
-4. Ürün/fiyat/stok tablosu
-5. Onaylı bayilere fiyat gösterimi
-6. WhatsApp sepet/sipariş akışı
+## 2) Bayi başvurusu
+Sitede Bayi Ol formu gerçek Supabase Auth hesabı oluşturur. İşletme adı metadata olarak kaydedilir ve profil `approved=false` ile başlar.
 
-eklenebilir.
+Supabase e-posta doğrulamasını açık tutuyorsanız bayi önce e-postasını doğrular.
 
-## GitHub Pages
-Repository içine bu dosyaları yükledikten sonra:
-Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save
+## 3) Bayi onayı
+İlk aşamada manuel onay:
+Supabase → Table Editor → dealer_profiles → ilgili bayi → `approved` alanını `true` yapın.
 
-Not: `index.html` repository kökünde bulunmalıdır.
+Sonraki aşamada güvenli bir admin paneli/Edge Function eklenebilir.
+
+## 4) Güvenlik
+Sitede yalnızca Supabase Publishable Key bulunur. Secret key, service_role key ve database password tarayıcı koduna kesinlikle eklenmemelidir.
+
+## 5) GitHub Pages
+Bu klasördeki `index.html`, `style.css`, `script.js`, `README.md` ve `supabase-setup.sql` dosyalarını GitHub repo'nuza yükleyin. `supabase-setup.sql` sitede çalışmaz; sadece Supabase SQL Editor içindir.
