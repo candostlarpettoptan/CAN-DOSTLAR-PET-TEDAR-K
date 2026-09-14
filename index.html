@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Can Dostlar Pet Tedarik - Petshoplar için profesyonel toptan pet ürünleri tedarikçisi.">
+  <title>Can Dostlar Pet Tedarik | B2B Pet Ürünleri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>İzmir • Bornova</span>
+      <span>Petshop işletmeleri için B2B tedarik</span>
+      <a href="tel:+905356153962">0535 615 39 62</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">CD</span>
+        <span><strong>Can Dostlar</strong><small>Pet Tedarik</small></span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#urunler">Ürünler</a>
+        <a href="#kategoriler">Kategoriler</a>
+        <a href="#neden">Neden Biz?</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="loginBtn">Bayi Girişi</button>
+        <button class="btn btn-primary" id="signupBtn">Bayi Ol</button>
+      </div>
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> PETSHOPLAR İÇİN PROFESYONEL TEDARİK</div>
+          <h1>İşletmenizin <em>güvenilir</em> pet tedarikçisi.</h1>
+          <p>Kedi, köpek, kuş, balık ve kemirgen ürünlerini tek noktadan keşfedin. Bayi hesabınızı oluşturun, onay sonrası özel fiyatlara erişin.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary btn-lg" href="#urunler">Ürünleri İncele →</a>
+            <a class="btn btn-light btn-lg" href="https://wa.me/905356153962" target="_blank" rel="noopener">WhatsApp'tan Ulaş</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Hızlı teklif</span>
+            <span>✓ Bayiye özel fiyat</span>
+            <span>✓ WhatsApp sipariş</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-glow"></div>
+          <div class="warehouse-icon">🐾</div>
+          <span class="mini-label">B2B TEDARİK</span>
+          <h3>Stoktan güçlü,<br>iletişimde hızlı.</h3>
+          <p>Güncel ürün ve fiyat talepleriniz için bize ulaşın.</p>
+          <div class="hero-contact">
+            <span>Bornova / İzmir</span>
+            <a href="tel:+905356153962">0535 615 39 62</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><strong>5+</strong><span>Ana kategori</span></div>
+        <div><strong>B2B</strong><span>Bayi odaklı sistem</span></div>
+        <div><strong>7/24</strong><span>WhatsApp iletişim</span></div>
+        <div><strong>İzmir</strong><span>Yerel tedarik</span></div>
+      </div>
+    </section>
+
+    <section id="kategoriler" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">KATEGORİLER</span><h2>İhtiyacınız olan her şey</h2></div>
+          <p>Ürünleri kategoriye göre keşfedin.</p>
+        </div>
+        <div class="category-grid">
+          <button class="category-card active" data-category="Kedi"><span>🐱</span><b>Kedi</b><small>Mama • Kum • Ödül</small></button>
+          <button class="category-card" data-category="Köpek"><span>🐶</span><b>Köpek</b><small>Mama • Ödül • Aksesuar</small></button>
+          <button class="category-card" data-category="Kuş"><span>🦜</span><b>Kuş</b><small>Yem • Kafes • Aksesuar</small></button>
+          <button class="category-card" data-category="Balık"><span>🐠</span><b>Balık</b><small>Yem • Akvaryum</small></button>
+          <button class="category-card" data-category="Kemirgen"><span>🐹</span><b>Kemirgen</b><small>Yem • Talaş • Aksesuar</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="urunler" class="section products-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">ÜRÜN KATALOĞU</span><h2>Öne çıkan ürünler</h2></div>
+          <div class="catalog-tools">
+            <input id="search" type="search" placeholder="Ürün ara...">
+            <select id="sort"><option value="default">Sıralama</option><option value="name">İsme göre</option><option value="category">Kategoriye göre</option></select>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <div id="emptyState" class="empty hidden">Aradığınız ürünü bulamadık. Farklı bir arama deneyin.</div>
+        <div class="price-note"><span>🔒</span><div><b>Fiyatlar bayilere özeldir.</b><small>Bayi hesabınız onaylandıktan sonra ürün fiyatlarını ve sipariş seçeneklerini görebilirsiniz.</small></div><button class="btn btn-primary" id="priceLogin">Fiyatları Gör</button></div>
+      </div>
+    </section>
+
+    <section id="neden" class="section why">
+      <div class="container">
+        <div class="section-head centered"><span class="eyebrow">NEDEN CAN DOSTLAR?</span><h2>İşinizi kolaylaştırmak için buradayız.</h2></div>
+        <div class="benefit-grid">
+          <article><div>⚡</div><h3>Hızlı iletişim</h3><p>Ürün, stok ve fiyat talepleriniz için doğrudan WhatsApp üzerinden ulaşın.</p></article>
+          <article><div>🔐</div><h3>Bayiye özel fiyat</h3><p>Onaylı işletmelere özel fiyatlandırma ile güvenli B2B alışveriş deneyimi.</p></article>
+          <article><div>📦</div><h3>Geniş ürün seçeneği</h3><p>Kedi, köpek, kuş, balık ve kemirgen kategorilerinde ürün kataloğu.</p></article>
+          <article><div>🤝</div><h3>Uzun vadeli iş ortaklığı</h3><p>Petshopların düzenli ve güvenilir tedarik ihtiyacına odaklanıyoruz.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div><span class="eyebrow">BAYİLİK</span><h2>Can Dostlar ailesine katılın.</h2><p>İşletmenizi kaydedin. Onay sonrası size özel fiyatları görüntüleyin.</p></div>
+        <button class="btn btn-white btn-lg" id="ctaSignup">Bayi Başvurusu Yap →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="iletisim">
+    <div class="container footer-grid">
+      <div class="brand footer-brand"><span class="brand-mark">CD</span><span><strong>Can Dostlar</strong><small>Pet Tedarik</small></span><p>Petshop işletmeleri için profesyonel B2B tedarik çözümü.</p></div>
+      <div><h4>Kategoriler</h4><a href="#urunler">Kedi</a><a href="#urunler">Köpek</a><a href="#urunler">Kuş</a><a href="#urunler">Balık</a><a href="#urunler">Kemirgen</a></div>
+      <div><h4>İletişim</h4><a href="tel:+905356153962">0535 615 39 62</a><span>Bornova / İzmir</span><a href="https://wa.me/905356153962" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="container copyright">© 2026 Can Dostlar Pet Tedarik. Tüm hakları saklıdır.</div>
+  </footer>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close>×</button>
+      <div class="modal-icon">🐾</div>
+      <span class="eyebrow" id="modalEyebrow">BAYİ GİRİŞİ</span>
+      <h2 id="modalTitle">Bayi hesabınıza giriş yapın</h2>
+      <p id="modalText">Onaylı bayi hesabınız varsa özel fiyatları görüntüleyebilirsiniz.</p>
+      <form id="dealerForm">
+        <div id="businessField" class="form-field hidden"><label>İşletme adı</label><input id="business" type="text" placeholder="Can Dostlar Petshop"></div>
+        <div class="form-field"><label>E-posta</label><input id="email" type="email" placeholder="ornek@firma.com" required></div>
+        <div class="form-field"><label>Şifre</label><input id="password" type="password" placeholder="••••••••" required></div>
+        <button class="btn btn-primary btn-full" id="formSubmit">Giriş Yap</button>
+      </form>
+      <p class="form-foot" id="formFoot">Bayi değil misiniz? <button type="button" id="switchMode">Bayi başvurusu yapın.</button></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
