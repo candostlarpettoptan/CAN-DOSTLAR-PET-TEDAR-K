@@ -1,6 +1,6 @@
-;// ============================================================
+// ============================================================
 // CAN DOSTLAR PET TEDARİK
-// Supabase bağlantılı - Herkese açık fiyat kataloğu
+// Supabase + Herkese Açık Fiyat Kataloğu
 // ============================================================
 
 const SUPABASE_URL = "https://nzqoddiekzvwumhgloyn.supabase.co";
@@ -46,7 +46,15 @@ const products = [
   {name:"Mhauw 30'lu Krema Tavuklu",price:225,cat:"Kedi",icon:"🐱"},
   {name:"Mhauw 4'lü Krema Tavuklu",price:35,cat:"Kedi",icon:"🐱"},
   {name:"Mhauw 4'lü Paket Ciğer",price:35,cat:"Kedi",icon:"🐱"},
-  {name:"Lolipop",price:15,cat:"Kedi",icon:"🐱"},
+
+  {name:"Colagen Kedi (30 Zarf)",price:250,cat:"Kedi",icon:"💊"},
+  {name:"Prozoo Collagen Kedi",price:100,cat:"Kedi",icon:"💊"},
+  {name:"Zonaks Colagen (30 Zarf)",price:250,cat:"Kedi",icon:"💊"},
+  {name:"Kedi Probiyotik (30 Adet)",price:250,cat:"Kedi",icon:"💊"},
+  {name:"İç Parazit Kedi-Köpek",price:25,cat:"Kedi",icon:"💊"},
+  {name:"Pro-Kitten Süt Tozu",price:45,cat:"Kedi",icon:"🥛"},
+  {name:"Zonaks Pupy Malt",price:80,cat:"Kedi",icon:"💊"},
+
   {name:"Kedi Çimi",price:27,cat:"Kedi",icon:"🌱"},
   {name:"3 Katlı Kedi Oyuncağı",price:60,cat:"Kedi",icon:"🐱"},
   {name:"Kedi Tırmalama Ev İki Katlı",price:750,cat:"Kedi",icon:"🐱"},
@@ -54,13 +62,6 @@ const products = [
   {name:"40 CM Tırmalama (5'li Paket)",price:375,cat:"Kedi",icon:"🐱"},
   {name:"50 CM Tırmalama (5'li Set)",price:500,cat:"Kedi",icon:"🐱"},
   {name:"60 CM Tırmalama (5 Adet)",price:600,cat:"Kedi",icon:"🐱"},
-
-  {name:"Colagen Kedi (30 Zarf)",price:250,cat:"Kedi",icon:"💊"},
-  {name:"Prozoo Collagen Kedi",price:100,cat:"Kedi",icon:"💊"},
-  {name:"Zonaks Colagen (30 Zarf)",price:250,cat:"Kedi",icon:"💊"},
-  {name:"Kedi Probiyotik (30 Adet)",price:250,cat:"Kedi",icon:"💊"},
-  {name:"İç Parazit Kedi-Köpek",price:25,cat:"Kedi",icon:"💊"},
-  {name:"Zonaks Pupy Malt",price:80,cat:"Kedi",icon:"💊"},
 
 
   // ==================== KÖPEK ====================
@@ -93,24 +94,25 @@ const products = [
   {name:"Bio Pet Active Multi Vitamin Tablet",price:50,cat:"Köpek",icon:"💊"},
   {name:"Bio Pet Active D Vitamin Tablet",price:50,cat:"Köpek",icon:"💊"},
   {name:"Bio Pet Active Vitamin Çiğneme Tablet",price:50,cat:"Köpek",icon:"💊"},
-  {name:"Bio Pet Active Vitamin Tablet (6 Adet)",price:50,cat:"Köpek",icon:"💊"},
+  {name:"Bio Pet Active Vitamin Tablet (Kutu 6 Adet)",price:50,cat:"Köpek",icon:"💊"},
   {name:"Doglife Calcium Tablet (D3) Vitamin",price:50,cat:"Köpek",icon:"💊"},
   {name:"Doglife Multi Vitamin Tablet",price:50,cat:"Köpek",icon:"💊"},
   {name:"Köpek Biotin",price:80,cat:"Köpek",icon:"💊"},
   {name:"Köpek Probiyotik (30 Tablet)",price:250,cat:"Köpek",icon:"💊"},
   {name:"Zonaks Biotin Plus",price:100,cat:"Köpek",icon:"💊"},
-  {name:"Zonaks Antisitres Paste",price:90,cat:"Köpek",icon:"💊"},
+  {name:"Zonaks Colagen (30 Zarf)",price:250,cat:"Köpek",icon:"💊"},
+  {name:"Zonaks Antisitres Paste (Sakinleştirici)",price:90,cat:"Köpek",icon:"💊"},
+
   {name:"Zonaks 1-10 KG Ense Damlası",price:40,cat:"Köpek",icon:"💧"},
   {name:"Zonaks 10-20 KG Ense Damlası",price:40,cat:"Köpek",icon:"💧"},
   {name:"Zonaks 20-40 KG Ense Damlası",price:40,cat:"Köpek",icon:"💧"},
+
   {name:"Zonaks Köpük Şampuan Aloe Vera",price:100,cat:"Köpek",icon:"🧴"},
   {name:"Zonaks Köpük Şampuan Çilek",price:100,cat:"Köpek",icon:"🧴"},
   {name:"Zonaks Toz Şampuan",price:80,cat:"Köpek",icon:"🧴"},
   {name:"Jessy Köpek Şampuanı",price:30,cat:"Köpek",icon:"🧴"},
   {name:"Dr Heigel's Süt Tozu 200 GR Köpek",price:55,cat:"Köpek",icon:"🥛"},
   {name:"Dr Heigel's Tüy Bakım Ürünü",price:50,cat:"Köpek",icon:"🧴"},
-  {name:"Prozoo Collagen Köpek",price:100,cat:"Köpek",icon:"💊"},
-  {name:"Vitali Doğ Vitamin Paste",price:75,cat:"Köpek",icon:"💊"},
 
   {name:"Daglife Kulak Temizleme Losyonu",price:50,cat:"Köpek",icon:"🧴"},
   {name:"Majo Kedi Köpek Kemirgen Kulak Bakım Losyonu",price:70,cat:"Köpek",icon:"🧴"},
@@ -120,8 +122,11 @@ const products = [
   {name:"Keyf Yara Bakım Solüsyonu",price:40,cat:"Köpek",icon:"🧴"},
   {name:"Veturel Yara Bakım Losyonu",price:150,cat:"Köpek",icon:"🧴"},
   {name:"Petzoom Pet Park Yavru Köpek Tuvalet Eğitim Seti",price:250,cat:"Köpek",icon:"🐶"},
+  {name:"Prozoo Collagen Köpek",price:100,cat:"Köpek",icon:"💊"},
   {name:"Prozoo Çiş Eğitim Sprey",price:45,cat:"Köpek",icon:"🧴"},
   {name:"Prozoo Kedi Köpek Göz Losyonu",price:80,cat:"Köpek",icon:"🧴"},
+  {name:"Vitali Doğ Vitamin Paste",price:75,cat:"Köpek",icon:"💊"},
+  {name:"Zonaks Köpük Şampuan Aloe Vera Kokulu",price:100,cat:"Köpek",icon:"🧴"},
 
 
   // ==================== KUŞ ====================
@@ -129,55 +134,63 @@ const products = [
   {name:"10'lu Ballı Yem",price:35,cat:"Kuş",icon:"🦜"},
   {name:"15'li Gaga Taşı",price:50,cat:"Kuş",icon:"🐦"},
   {name:"3'lü Daldarı Kızıl",price:15,cat:"Kuş",icon:"🌾"},
+
   {name:"100 Seri Kafes Koli 24 Adet",price:4560,cat:"Kuş",icon:"🐦"},
   {name:"200 Seri Kafes Koli 24 Adet",price:5400,cat:"Kuş",icon:"🐦"},
   {name:"300 Seri Boyalı Kafes Koli 15'li",price:4500,cat:"Kuş",icon:"🐦"},
   {name:"300 Seri Gold Kafes Koli 15'li",price:4500,cat:"Kuş",icon:"🐦"},
   {name:"300 Seri Krom Kafes Koli 15'li",price:4500,cat:"Kuş",icon:"🐦"},
+
   {name:"Jako Kafes Üstten Açılır 65x43x33",price:600,cat:"Kuş",icon:"🐦"},
   {name:"Silindir Kafes 3'lü Set",price:2000,cat:"Kuş",icon:"🐦"},
   {name:"Silindir Kafes Gold 3'lü Set",price:2000,cat:"Kuş",icon:"🐦"},
   {name:"Sultan Papağanı Kafesleri",price:600,cat:"Kuş",icon:"🦜"},
+  {name:"Kafes Askısı",price:500,cat:"Kuş",icon:"🐦"},
+  {name:"Kafes Sehpası",price:500,cat:"Kuş",icon:"🐦"},
+
+  {name:"Aynalı Salıncak",price:30,cat:"Kuş",icon:"🪶"},
+  {name:"Papağan Ahşap Salıncak",price:50,cat:"Kuş",icon:"🪵"},
+  {name:"Cam Kuş Oyuncağı",price:25,cat:"Kuş",icon:"🦜"},
+
+  {name:"Banyoluk",price:25,cat:"Kuş",icon:"💧"},
+  {name:"Kuş Banyoluğu",price:25,cat:"Kuş",icon:"💧"},
+  {name:"Kuş Tasması",price:20,cat:"Kuş",icon:"🐦"},
 
   {name:"Majo Kızıştırıcı Yem",price:18,cat:"Kuş",icon:"🌾"},
   {name:"Majo Muhabbet Yemi 500 GR",price:38,cat:"Kuş",icon:"🌾"},
   {name:"Majo Premium Muhabbet Yemi 400 GR",price:35,cat:"Kuş",icon:"🌾"},
   {name:"Majo Tamamlayıcı Yulaf 400 GR",price:26,cat:"Kuş",icon:"🌾"},
-  {name:"Şampiyon Kuş Yemi 400 GR",price:35,cat:"Kuş",icon:"🌾"},
   {name:"Kiloluk Daldarı 20 KG Koli",price:275,cat:"Kuş",icon:"🌾"},
+  {name:"Şampiyon Kuş Yemi 400 GR",price:35,cat:"Kuş",icon:"🌾"},
 
-  {name:"Aynalı Salıncak",price:30,cat:"Kuş",icon:"🪶"},
-  {name:"Papağan Ahşap Salıncak",price:50,cat:"Kuş",icon:"🪵"},
-  {name:"Cam Kuş Oyuncağı",price:25,cat:"Kuş",icon:"🦜"},
-  {name:"Renkli Gaga Taşı (18 Adet)",price:100,cat:"Kuş",icon:"🐦"},
   {name:"Muhabbet Kuşu Lux Yemlik",price:12,cat:"Kuş",icon:"🥣"},
   {name:"Muhabbet Kuşu Parmak Suluk",price:9,cat:"Kuş",icon:"💧"},
   {name:"Muhabbet Kuşu Yemlik Kristal",price:10,cat:"Kuş",icon:"🥣"},
   {name:"Muhabbet Paraket Suluk 100 CC",price:10,cat:"Kuş",icon:"💧"},
   {name:"Silo Yemlik",price:45,cat:"Kuş",icon:"🥣"},
-  {name:"Kuş Tasması",price:20,cat:"Kuş",icon:"🐦"},
-  {name:"Banyoluk",price:25,cat:"Kuş",icon:"💧"},
-  {name:"Kuş Banyoluğu",price:25,cat:"Kuş",icon:"💧"},
+
   {name:"Kanarya Hint Bülbülü Yuva Kılı",price:12,cat:"Kuş",icon:"🐦"},
   {name:"Larc Tül",price:22,cat:"Kuş",icon:"🐦"},
   {name:"M Kafes Tülü",price:22,cat:"Kuş",icon:"🐦"},
   {name:"XL Tül",price:22,cat:"Kuş",icon:"🐦"},
-  {name:"Kafes Askısı",price:500,cat:"Kuş",icon:"🐦"},
-  {name:"Kafes Sehpası",price:500,cat:"Kuş",icon:"🐦"},
+
   {name:"Dr Heigel's B Vitamin",price:30,cat:"Kuş",icon:"💊"},
   {name:"Dr Heigel's Bit Pire Tozu",price:40,cat:"Kuş",icon:"💊"},
   {name:"Dr Heigel's Multi Vitamin",price:30,cat:"Kuş",icon:"💊"},
   {name:"Dr Heigel's Soğuk Algınlığı",price:30,cat:"Kuş",icon:"💊"},
   {name:"Dr Heigel's Tüy Bakım Ürünü",price:40,cat:"Kuş",icon:"🧴"},
+
   {name:"İthal Kalamar Kemiği 10-15 CM",price:15,cat:"Kuş",icon:"🦴"},
   {name:"İthal Kalamar Kemiği 15-20 CM",price:25,cat:"Kuş",icon:"🦴"},
   {name:"İthal Kalamar Gagası 6-10 CM",price:10,cat:"Kuş",icon:"🦴"},
+
   {name:"Paw Kızıştırıcı Vitamin Damla",price:22,cat:"Kuş",icon:"💧"},
   {name:"Paw Multi Vitamin",price:22,cat:"Kuş",icon:"💊"},
   {name:"Paw Tüy Vitamini",price:22,cat:"Kuş",icon:"💊"},
+  {name:"Renkli Gaga Taşı (18 Adet)",price:100,cat:"Kuş",icon:"🐦"},
 
 
-  // ==================== BALIK / AKVARYUM ====================
+  // ==================== AKVARYUM ====================
 
   {name:"12'li Akvaryum Dekor",price:290,cat:"Balık",icon:"🐠"},
   {name:"Ağaç Adam Dekor",price:120,cat:"Balık",icon:"🌿"},
@@ -210,7 +223,9 @@ const products = [
   {name:"File Deniz Kabuğu",price:120,cat:"Balık",icon:"🐚"},
   {name:"Deniz Kabuğu 1 KG",price:220,cat:"Balık",icon:"🐚"},
   {name:"Deniz Kabuğu Beyaz 1 KG",price:220,cat:"Balık",icon:"🐚"},
-  {name:"Akvaryum Balık Yemi",price:0,cat:"Balık",icon:"🐠"},
+
+  // Fiyat gönderilmediği için
+  {name:"Akvaryum Balık Yemi",price:null,cat:"Balık",icon:"🐠"},
 
 
   // ==================== KAPLUMBAĞA ====================
@@ -220,16 +235,6 @@ const products = [
   {name:"Kaplumbağa Kabuk Sertleştirici",price:60,cat:"Kaplumbağa",icon:"🐢"},
   {name:"Kaplumbağa Su Düzenleyici",price:120,cat:"Kaplumbağa",icon:"🐢"},
   {name:"Kaplumbağa Yemi",price:40,cat:"Kaplumbağa",icon:"🐢"},
-
-
-  // ==================== OYUNCAK ====================
-
-  {name:"Horoz Larç",price:45,cat:"Oyuncak",icon:"🐔"},
-  {name:"Petzoom Sert Top",price:50,cat:"Oyuncak",icon:"⚽"},
-  {name:"Tahta Saplı Olta",price:30,cat:"Oyuncak",icon:"🎣"},
-  {name:"Tekerlekli Hacı Yatmaz",price:30,cat:"Oyuncak",icon:"🎾"},
-  {name:"Tüylü Zilli Top",price:12,cat:"Oyuncak",icon:"🔔"},
-  {name:"3 Katlı Kedi Oyuncağı",price:60,cat:"Oyuncak",icon:"🐱"},
 
 
   // ==================== AKSESUAR ====================
@@ -242,9 +247,17 @@ const products = [
   {name:"Taraftar Forma GS 6'lı Set",price:850,cat:"Aksesuar",icon:"👕"},
 
   {name:"Elizabet Yakalık 5 Desen",price:85,cat:"Aksesuar",icon:"🐶"},
+  {name:"Halı ve Koltuk Tiftik Toplayıcı",price:20,cat:"Aksesuar",icon:"🧹"},
+  {name:"İki Gözlü Mama Kabı",price:35,cat:"Aksesuar",icon:"🥣"},
+  {name:"İkili Mama Kabı Silikon",price:160,cat:"Aksesuar",icon:"🥣"},
+  {name:"Kauçuk Tabanlı İkili Mama Kabı",price:225,cat:"Aksesuar",icon:"🥣"},
   {name:"Kedi Köpek Papyon",price:20,cat:"Aksesuar",icon:"🎀"},
   {name:"Kutulu Papyon",price:25,cat:"Aksesuar",icon:"🎀"},
   {name:"Baskılı Kravat",price:30,cat:"Aksesuar",icon:"👔"},
+  {name:"Su Matarası",price:100,cat:"Aksesuar",icon:"💧"},
+  {name:"Yavaş Yeme Mama Kabı",price:75,cat:"Aksesuar",icon:"🥣"},
+  {name:"Tisert Rezerv Mama Kabı 1.9 Litre",price:90,cat:"Aksesuar",icon:"🥣"},
+  {name:"Ars Su Pınarı 1.8 Litre Şeffaf",price:650,cat:"Aksesuar",icon:"💧"},
 
   {name:"Belden Bağlama Tasma L",price:85,cat:"Aksesuar",icon:"🐕"},
   {name:"Belden Bağlama Tasma M",price:75,cat:"Aksesuar",icon:"🐕"},
@@ -267,13 +280,6 @@ const products = [
   {name:"Kapalı Tuvalet",price:275,cat:"Tuvalet",icon:"🧼"},
   {name:"Lux Açık Tuvalet",price:160,cat:"Tuvalet",icon:"🧼"},
   {name:"Lux Kapalı Tuvalet",price:325,cat:"Tuvalet",icon:"🧼"},
-  {name:"Yavaş Yeme Mama Kabı",price:75,cat:"Aksesuar",icon:"🥣"},
-  {name:"İki Gözlü Mama Kabı",price:35,cat:"Aksesuar",icon:"🥣"},
-  {name:"İkili Mama Kabı Silikon",price:160,cat:"Aksesuar",icon:"🥣"},
-  {name:"Kauçuk Tabanlı İkili Mama Kabı",price:225,cat:"Aksesuar",icon:"🥣"},
-  {name:"Su Matarası",price:100,cat:"Aksesuar",icon:"💧"},
-  {name:"Tisert Rezerv Mama Kabı 1.9 Litre",price:90,cat:"Aksesuar",icon:"🥣"},
-  {name:"Ars Su Pınarı 1.8 Litre Şeffaf",price:650,cat:"Aksesuar",icon:"💧"},
 
 
   // ==================== YATAK ====================
@@ -292,19 +298,26 @@ const products = [
   {name:"Zampa Tarak S",price:50,cat:"Bakım",icon:"🪮"},
   {name:"Zampa Tarak M",price:55,cat:"Bakım",icon:"🪮"},
   {name:"Zampa Tarak L",price:60,cat:"Bakım",icon:"🪮"},
-  {name:"Halı ve Koltuk Tiftik Toplayıcı",price:20,cat:"Bakım",icon:"🧹"},
+
   {name:"Koku Giderici Ambiance (15 Adet)",price:175,cat:"Bakım",icon:"🧴"},
   {name:"Koku Giderici Motto (15 Adet)",price:175,cat:"Bakım",icon:"🧴"},
-  {name:"Pro-Kitten Süt Tozu",price:45,cat:"Bakım",icon:"🥛"},
 
 
   // ==================== DİĞER ====================
 
+  {name:"Munchy",price:20,cat:"Diğer",icon:"🦴"},
   {name:"Avakado",price:20,cat:"Diğer",icon:"🥑"},
   {name:"Ambresia Panc Kuzulu",price:12,cat:"Diğer",icon:"🐾"},
   {name:"Ambresia Panc Somon",price:12,cat:"Diğer",icon:"🐾"},
   {name:"Ampresia Panc Tavuklu",price:12,cat:"Diğer",icon:"🐾"},
-  {name:"Amsteria Panc Kitten",price:12,cat:"Diğer",icon:"🐱"}
+  {name:"Amsteria Panc Kitten",price:12,cat:"Diğer",icon:"🐱"},
+  {name:"Horoz Larç",price:45,cat:"Diğer",icon:"🐔"},
+  {name:"Petzoom Sert Top",price:50,cat:"Diğer",icon:"⚽"},
+  {name:"Tahta Saplı Olta",price:30,cat:"Diğer",icon:"🎣"},
+  {name:"Tekerlekli Hacı Yatmaz",price:30,cat:"Diğer",icon:"🎾"},
+  {name:"Tüylü Zilli Top",price:12,cat:"Diğer",icon:"🔔"},
+  {name:"M-pets Köpek Ödül",price:50,cat:"Diğer",icon:"🦴"},
+  {name:"Lolipop",price:15,cat:"Diğer",icon:"🍭"}
 ];
 
 
@@ -323,17 +336,18 @@ let currentProfile = null;
 
 
 // ============================================================
-// FİYAT FORMATLAMA
+// FİYAT
 // ============================================================
 
 function formatPrice(price){
-  if(price === null || price === undefined || price === 0){
+
+  if(price === null || price === undefined){
     return "Fiyat sorunuz";
   }
 
   return new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
   }).format(price) + " TL";
 }
 
@@ -343,6 +357,11 @@ function formatPrice(price){
 // ============================================================
 
 function render(){
+
+  if(!grid || !search || !sort || !empty){
+    console.error("Katalog HTML elemanları bulunamadı.");
+    return;
+  }
 
   const q = search.value.trim().toLowerCase();
 
@@ -402,38 +421,50 @@ function render(){
 // KATEGORİLER
 // ============================================================
 
-document.querySelectorAll(".category-card").forEach(btn => {
+document
+  .querySelectorAll(".category-card")
+  .forEach(btn => {
 
-  btn.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
 
-    document
-      .querySelectorAll(".category-card")
-      .forEach(x => x.classList.remove("active"));
+      document
+        .querySelectorAll(".category-card")
+        .forEach(x =>
+          x.classList.remove("active")
+        );
 
-    btn.classList.add("active");
+      btn.classList.add("active");
 
-    selected = btn.dataset.category;
+      selected = btn.dataset.category;
 
-    render();
+      render();
 
-    document
-      .getElementById("urunler")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
+      const section =
+        document.getElementById("urunler");
+
+      if(section){
+        section.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+      }
+
+    });
 
   });
-
-});
 
 
 // ============================================================
 // ARAMA / SIRALAMA
 // ============================================================
 
-search.addEventListener("input", render);
-sort.addEventListener("change", render);
+if(search){
+  search.addEventListener("input", render);
+}
+
+if(sort){
+  sort.addEventListener("change", render);
+}
 
 
 // ============================================================
@@ -451,9 +482,10 @@ const foot = document.getElementById("formFoot");
 let signup = false;
 
 
-function setMessage(message, error=false){
+function setMessage(message,error=false){
 
-  let el = document.getElementById("authMessage");
+  let el =
+    document.getElementById("authMessage");
 
   if(!el){
 
@@ -464,9 +496,13 @@ function setMessage(message, error=false){
     el.style.cssText =
       "margin:12px 0;padding:10px 12px;border-radius:10px;font-size:14px;line-height:1.4;";
 
-    document
-      .getElementById("dealerForm")
-      .prepend(el);
+    const form =
+      document.getElementById("dealerForm");
+
+    if(form){
+      form.prepend(el);
+    }
+
   }
 
   el.textContent = message;
@@ -480,6 +516,8 @@ function setMessage(message, error=false){
 
 
 function openModal(mode=false){
+
+  if(!modal) return;
 
   signup = mode;
 
@@ -498,10 +536,12 @@ function openModal(mode=false){
       ? "İşletme bilgilerinizi bırakın. Başvurunuz yönetici onayına gönderilir."
       : "Bayi hesabınız varsa giriş yapabilirsiniz.";
 
-  businessField.classList.toggle(
-    "hidden",
-    !mode
-  );
+  if(businessField){
+    businessField.classList.toggle(
+      "hidden",
+      !mode
+    );
+  }
 
   submit.textContent =
     mode ? "Başvuru Gönder" : "Giriş Yap";
@@ -530,26 +570,52 @@ function openModal(mode=false){
 
 
 // ============================================================
-// MODAL BUTONLARI
+// BUTONLAR
 // ============================================================
 
-document.getElementById("loginBtn").onclick =
-  () => openModal(false);
+const loginBtn =
+  document.getElementById("loginBtn");
 
-document.getElementById("signupBtn").onclick =
-  () => openModal(true);
+const signupBtn =
+  document.getElementById("signupBtn");
 
-document.getElementById("ctaSignup").onclick =
-  () => openModal(true);
+const ctaSignup =
+  document.getElementById("ctaSignup");
 
-document.getElementById("priceLogin").onclick =
-  () => openModal(false);
+const priceLogin =
+  document.getElementById("priceLogin");
 
-document.querySelectorAll("[data-close]")
+if(loginBtn){
+  loginBtn.onclick =
+    () => openModal(false);
+}
+
+if(signupBtn){
+  signupBtn.onclick =
+    () => openModal(true);
+}
+
+if(ctaSignup){
+  ctaSignup.onclick =
+    () => openModal(true);
+}
+
+if(priceLogin){
+  priceLogin.onclick =
+    () => openModal(false);
+}
+
+document
+  .querySelectorAll("[data-close]")
   .forEach(x => {
 
-    x.onclick = () =>
-      modal.classList.add("hidden");
+    x.onclick = () => {
+
+      if(modal){
+        modal.classList.add("hidden");
+      }
+
+    };
 
   });
 
@@ -604,17 +670,21 @@ async function loadProfile(user){
 
 function updateAuthButtons(){
 
-  const loginBtn =
+  const login =
     document.getElementById("loginBtn");
 
-  const signupBtn =
+  const signupButton =
     document.getElementById("signupBtn");
+
+  if(!login || !signupButton){
+    return;
+  }
 
   if(currentUser){
 
-    loginBtn.textContent = "Çıkış Yap";
+    login.textContent = "Çıkış Yap";
 
-    loginBtn.onclick = async () => {
+    login.onclick = async () => {
 
       await supabaseClient.auth.signOut();
 
@@ -624,18 +694,18 @@ function updateAuthButtons(){
 
     };
 
-    signupBtn.textContent =
+    signupButton.textContent =
       currentProfile?.approved
         ? "Onaylı Bayi"
         : "Başvuru Bekliyor";
 
-    signupBtn.onclick = () => {
+    signupButton.onclick = () => {
 
       if(currentProfile?.approved){
 
         alert(
           "Hesabınız onaylı. " +
-          "Bayi fiyatlarını görüntüleyebilirsiniz."
+          "Bayi hesabınız aktif."
         );
 
       }else{
@@ -650,13 +720,15 @@ function updateAuthButtons(){
 
   }else{
 
-    loginBtn.textContent = "Bayi Girişi";
-    signupBtn.textContent = "Bayi Ol";
+    login.textContent = "Bayi Girişi";
 
-    loginBtn.onclick =
+    signupButton.textContent =
+      "Bayi Ol";
+
+    login.onclick =
       () => openModal(false);
 
-    signupBtn.onclick =
+    signupButton.onclick =
       () => openModal(true);
 
   }
@@ -668,128 +740,148 @@ function updateAuthButtons(){
 // BAYİ FORMU
 // ============================================================
 
-document
-  .getElementById("dealerForm")
-  .addEventListener("submit", async e => {
+const dealerForm =
+  document.getElementById("dealerForm");
 
-    e.preventDefault();
+if(dealerForm){
 
-    const email =
-      document.getElementById("email")
-        .value.trim();
+  dealerForm.addEventListener(
+    "submit",
+    async e => {
 
-    const password =
-      document.getElementById("password")
-        .value;
+      e.preventDefault();
 
-    const business =
-      document.getElementById("business")
-        .value.trim();
+      const email =
+        document.getElementById("email")
+          .value.trim();
 
-    submit.disabled = true;
+      const password =
+        document.getElementById("password")
+          .value;
 
-    submit.textContent =
-      "İşleniyor...";
+      const businessInput =
+        document.getElementById("business");
 
-    try{
+      const business =
+        businessInput
+          ? businessInput.value.trim()
+          : "";
 
-      if(signup){
+      submit.disabled = true;
 
-        if(!business){
+      submit.textContent =
+        "İşleniyor...";
 
-          setMessage(
-            "Lütfen işletme adını yazın.",
-            true
-          );
+      try{
 
-          return;
-        }
+        if(signup){
 
-        const {
-          data,
-          error
-        } = await supabaseClient.auth.signUp({
+          if(!business){
 
-          email,
-          password,
+            setMessage(
+              "Lütfen işletme adını yazın.",
+              true
+            );
 
-          options:{
-            data:{
-              business_name:business
-            }
+            return;
           }
 
-        });
+          const {
+            data,
+            error
+          } =
+            await supabaseClient.auth.signUp({
 
-        if(error) throw error;
+              email,
+              password,
 
-        if(data.user){
+              options:{
+                data:{
+                  business_name:business
+                }
+              }
 
-          setMessage(
-            data.session
+            });
 
-              ? "Başvurunuz alındı. Yönetici onayından sonra bayi hesabınızı kullanabilirsiniz."
+          if(error) throw error;
 
-              : "Kayıt oluşturuldu. E-posta adresinizi doğruladıktan sonra başvurunuz yönetici onayına alınacaktır."
-          );
+          if(data.user){
 
-          if(data.session)
-            await loadProfile(data.user);
+            setMessage(
+              data.session
 
-        }
+                ? "Başvurunuz alındı."
 
-      }else{
+                : "Kayıt oluşturuldu. E-posta adresinizi doğrulayın."
+            );
 
-        const {
-          data,
-          error
-        } = await supabaseClient.auth
-          .signInWithPassword({
-            email,
-            password
-          });
+            if(data.session){
 
-        if(error) throw error;
+              await loadProfile(
+                data.user
+              );
 
-        await loadProfile(data.user);
+            }
 
-        if(currentProfile?.approved){
-
-          modal.classList.add("hidden");
-
-          alert(
-            "Hoş geldiniz! Bayi hesabınız onaylı."
-          );
+          }
 
         }else{
 
-          setMessage(
-            "Giriş başarılı. Hesabınız henüz yönetici tarafından onaylanmadı."
-          );
+          const {
+            data,
+            error
+          } =
+            await supabaseClient.auth
+              .signInWithPassword({
+                email,
+                password
+              });
+
+          if(error) throw error;
+
+          await loadProfile(data.user);
+
+          if(currentProfile?.approved){
+
+            modal.classList.add("hidden");
+
+            alert(
+              "Hoş geldiniz! Bayi hesabınız onaylı."
+            );
+
+          }else{
+
+            setMessage(
+              "Giriş başarılı. Hesabınız henüz yönetici tarafından onaylanmadı."
+            );
+
+          }
 
         }
 
+      }catch(err){
+
+        setMessage(
+          err.message ||
+          "Bir hata oluştu.",
+          true
+        );
+
+      }finally{
+
+        submit.disabled = false;
+
+        submit.textContent =
+          signup
+            ? "Başvuru Gönder"
+            : "Giriş Yap";
+
       }
 
-    }catch(err){
-
-      setMessage(
-        err.message || "Bir hata oluştu.",
-        true
-      );
-
-    }finally{
-
-      submit.disabled = false;
-
-      submit.textContent =
-        signup
-          ? "Başvuru Gönder"
-          : "Giriş Yap";
-
     }
+  );
 
-  });
+}
 
 
 // ============================================================
@@ -798,29 +890,44 @@ document
 
 (async()=>{
 
-  const {
-    data
-  } = await supabaseClient.auth.getSession();
+  try{
 
-  await loadProfile(
-    data.session?.user || null
-  );
+    const {
+      data
+    } =
+      await supabaseClient.auth
+        .getSession();
 
-  supabaseClient.auth.onAuthStateChange(
-    async (_event, session) => {
+    await loadProfile(
+      data.session?.user || null
+    );
 
-      await loadProfile(
-        session?.user || null
-      );
+    supabaseClient.auth.onAuthStateChange(
+      async (_event,session) => {
 
-    }
-  );
+        await loadProfile(
+          session?.user || null
+        );
+
+      }
+    );
+
+  }catch(error){
+
+    console.error(
+      "Supabase oturum hatası:",
+      error
+    );
+
+    render();
+
+  }
 
 })();
 
 
 // ============================================================
-// İLK RENDER
+// İLK GÖRÜNTÜ
 // ============================================================
 
 render();
